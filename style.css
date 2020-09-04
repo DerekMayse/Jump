@@ -1,0 +1,75 @@
+
+/* targets the id of the title */
+#title{
+    /* aligns the text of the title to the center of the page */
+text-align: center;
+}
+
+/* cancels out the default margin and padding deifined by the browser? */
+*{
+    padding:0;
+    margin:0;
+}
+
+/* targets the id of game */
+#game{
+    /* defines the dimmensions that the game takes place in */
+    width: 500px;
+    height: 236px;
+    margin-left: 85px;
+    border: 5px solid black;
+
+    /* displays the background image for the defined game space*/
+    background-image:url("https://1.bp.blogspot.com/-YgUdNN3fY_4/TxGyX7ta0VI/AAAAAAAADJc/rrhh9P9bMY0/s1600/zelda_2_atari.PNG") ;
+     /* defines the size of the background image in relation to the original size and defined game space*/
+    background-size: 80%;
+}
+
+/* targets the character inside the game */
+#character{
+    /* defines the dimmensions of the character*/
+    width:50px;
+    height: 50px;
+    background-color: red;
+    /* determines the starting position of the character relative to the postion of the defined game space */
+    position: relative;
+    top: 150px;
+    /* displays the character's image */
+     background-image:url("https://i.pinimg.com/originals/e5/c3/c9/e5c3c954c5ea2cb8447ada5d7fbfc383.png") ; 
+     background-size: 122%;  
+}    
+/*property that defines how long a character jumps for */
+    .animate{
+    animation: jump 500ms ;
+    }
+
+/* defines the frames of animation for the character's jump*/
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+/* targets the enemy a.k.a. bomb ib the game*/
+#block{
+    /* displays the enemy's image  */
+    background-image:url("https://t3.rbxcdn.com/77165fb9149360919f445ed470a88614") ; 
+    background-size: 100%; 
+    /* defines the dimmensions of the enemy*/
+    width: 20px;
+    height: 20px;
+    background-color: rgb(109, 159, 4);
+/* determines the starting position of the enemy relative to the postion of the defined game space */
+    position: relative;
+    top: 130px;
+    left: 480px;
+    /* this controls how fast the block moves */
+    animation:block 590ms infinite linear;
+}
+
+@keyframes block{
+    0%{left:480px;}
+    100%{left:-15px;}
+}
+
